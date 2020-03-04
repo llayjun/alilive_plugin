@@ -16,6 +16,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** AlilivePlugin */
 public class AlilivePlugin: FlutterPlugin, MethodCallHandler {
+
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         val channel = MethodChannel(flutterPluginBinding.flutterEngine.dartExecutor, "com.czh.tvmerchantapp/plugin")
         context = flutterPluginBinding.applicationContext
@@ -46,6 +47,11 @@ public class AlilivePlugin: FlutterPlugin, MethodCallHandler {
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {}
 
+    fun registerWith(registrar: Registrar) {
+        val channel = MethodChannel(registrar.messenger(), "com.czh.tvmerchantapp/plugin")
+        channel.setMethodCallHandler(AlilivePlugin())
+    }
+
     companion object {
         @JvmField
         var context: Context? = null
@@ -58,9 +64,6 @@ public class AlilivePlugin: FlutterPlugin, MethodCallHandler {
 // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
 // depending on the user's project. onAttachedToEngine or registerWith must both be defined
 // in the same class.
-        fun registerWith(registrar: Registrar) {
-            val channel = MethodChannel(registrar.messenger(), "com.czh.tvmerchantapp/plugin")
-            channel.setMethodCallHandler(AlilivePlugin())
-        }
+
     }
 }
