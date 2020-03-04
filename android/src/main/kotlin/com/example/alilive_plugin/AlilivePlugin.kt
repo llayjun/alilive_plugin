@@ -30,6 +30,7 @@ public class AlilivePlugin: FlutterPlugin, MethodCallHandler {
         @JvmStatic
         fun registerWith(registrar: Registrar) {
             val channel = MethodChannel(registrar.messenger(), "com.czh.tvmerchantapp/plugin")
+            context = registrar.context()
             channel.setMethodCallHandler(AlilivePlugin())
         }
     }
