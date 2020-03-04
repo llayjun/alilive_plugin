@@ -1,0 +1,22 @@
+PODS:
+  - alilive_plugin (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - alilive_plugin (from `.symlinks/plugins/alilive_plugin/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  alilive_plugin:
+    :path: ".symlinks/plugins/alilive_plugin/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  alilive_plugin: 6ebbd9a33a009d1bab3798ffa4ce4851c06aeeaa
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
+
+COCOAPODS: 1.8.4
