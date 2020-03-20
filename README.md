@@ -1,6 +1,6 @@
-# alilive_plugin
+# alilive_plugin阿里云直播的flutter插件
 
-A new Flutter plugin.
+A new Flutter plugin.阿里云直播的flutter插件
 
 ## Getting Started
 
